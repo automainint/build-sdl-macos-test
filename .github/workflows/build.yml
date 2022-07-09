@@ -14,6 +14,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install GCC
+        uses: egor-tensin/setup-gcc@v1
+        with:
+          version: 12
+
       - name: Clone SDL
         run: |
           git clone --depth 1 https://github.com/libsdl-org/SDL.git
