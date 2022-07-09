@@ -18,11 +18,11 @@ jobs:
         run: |
           git clone --depth 1 https://github.com/libsdl-org/SDL.git
 
-      - name: Build with GCC 11
+      - name: Build with GCC
         run: |
           cmake -D CMAKE_BUILD_TYPE=Debug -B build -S .
           cmake --build build
         working-directory: ${{ github.workspace }}/SDL
         env:
-          CC: gcc-11
-          CXX: g++-11
+          CC: gcc-12
+          CXX: g++-12
