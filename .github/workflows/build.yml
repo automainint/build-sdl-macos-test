@@ -21,7 +21,7 @@ jobs:
       - name: Build with GCC 11
         run: |
           cmake -D CMAKE_BUILD_TYPE=Debug -B build -S .
-          cmake --build build --config $BUILD_TYPE
+          cmake --build build
         working-directory: ${{ github.workspace }}/SDL
         env:
           CC: gcc-11
